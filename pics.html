@@ -1,0 +1,2575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/.nekoweb-api/static/site.js" type="text/javascript" defer></script>
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://rice.nekoweb.org/styles.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="icon" type="image/png" href="">
+  <title>hihi</title>
+ 
+  <style>
+
+body {
+font-family:ms ui gothic;
+font-size:14px;
+color:#124375;
+background-color:ghostwhite;
+background-image:url("https://rice.nekoweb.org/rice/bluebg.png");
+padding:10px;
+image-rendering:pixelated;
+cursor: url('https://rice.nekoweb.org/toroinoue.ico'), auto;
+}
+
+.container {
+position:relative;
+margin:auto;
+margin-top:80px;
+border:1px solid #809bb8;
+width:600px;
+padding:0px;
+background-color:white;
+box-sizing: border-box;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.bar {
+border:1px dashed #809bb8;
+border-top:none;
+border-left:none;
+border-right:none;
+padding:5px;
+background: #C8DEF7;
+background: linear-gradient(0deg, rgba(200, 222, 247, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(200, 222, 247, 1) 100%);
+box-sizing: border-box;
+display:flex;
+align-items: center;
+width:100%;
+text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+
+.boxes {
+display:flex;
+flex-direction: row;
+justify-content: flex-end;
+gap:5px;
+width:100px;
+border:0px solid black;
+}
+
+.name {
+width:100%;
+display:flex;
+align-items: center;
+gap:5px;
+}
+
+.left, .middle, .right {
+width:13px;
+height:13px;
+text-align:center;
+border:1px solid #809bb8;
+background-color:#FCFCFC;
+}
+
+.left:hover {
+width:13px;
+height:13px;
+text-align:center;
+border:1px solid #809bb8;
+background-color:#CAD4DE;
+}
+
+.middle:hover {
+width:13px;
+height:13px;
+text-align:center;
+border:1px solid #809bb8;
+background-color:#CAD4DE;
+}
+
+.right:hover {
+width:13px;
+height:13px;
+text-align:center;
+border:1px solid #809bb8;
+background-color:#CAD4DE;
+}
+
+.content {
+padding:10px;
+height:600px;
+box-sizing: border-box;
+overflow:auto;
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+gap:10px;
+}
+
+.photo {
+width:100px;
+max-height:130px;
+border:1px solid #809bb8;
+padding:10px;
+background-color:#C8DEF7;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.frame {
+width:100px;
+height:100px;
+border:1px solid #809bb8;
+background-color:white;
+}
+
+.text {
+text-align:center;
+padding:10px;
+text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+}
+
+.sidebar {
+position:absolute;
+top:100px;
+left:-180px;
+z-index:2;
+border:1px solid #809bb8;
+background-color:white;
+padding:0px;
+width:200px;
+box-sizing: border-box;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.float {
+position:absolute;
+bottom:-50px;
+right:-180px;
+z-index:2;
+border:1px solid #809bb8;
+background-color:white;
+box-sizing: border-box;
+width:200px;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.plus {
+height:400px;
+box-sizing: border-box;
+padding:10px;
+overflow:auto;
+}
+
+.ultra {
+height:200px;
+box-sizing: border-box;
+padding:10px;	
+overflow:auto;
+}
+
+.desktop {
+width:75px;
+border:0px solid black;
+position:absolute;
+top:0px;
+right:-100px;
+z-index:1;
+display:flex;
+flex-direction: row;
+justify-content: center;
+flex-wrap: wrap;
+gap:5px;
+text-align:left;
+}
+
+.folder {
+width:33px;
+height:26px;
+margin-left:-5px;
+background-image:url("https://rice.place/rice/folderclosed.png");
+background-repeat:no-repeat;
+}
+
+.folder:hover {
+width:33px;
+height:26px;
+background-image:url("https://rice.place/rice/folderopened.png");
+background-repeat:no-repeat;
+}
+
+.desc {
+width:70px;
+display:flex;
+flex-direction: row;
+justify-content: space-between;
+border:0px solid black;
+margin-top:-5px;
+}
+
+.date {
+width:33px;
+text-align:center;
+text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+margin:auto;
+border:px solid black;
+}
+
+.tablinks {
+border:none;
+background-color:transparent;
+cursor: url('https://rice.nekoweb.org/toroinoue.ico'), auto;
+width:33px;
+}
+
+.tablinks:hover {
+border:none;
+background-color:transparent;
+cursor: url('https://rice.nekoweb.org/kuro.ico'), auto;
+width:33px;
+}
+
+.polaroid {
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+gap:10px;
+}
+
+.footer {
+margin:auto;
+margin-top:10px;
+width:600px;
+text-align:left;
+text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+font-weight:bold;
+padding:0px 0px 0px 10px;
+}
+
+  </style>
+        
+</head>
+    
+  <body>
+
+<div class="container">
+
+	<div class="bar">
+    
+    <div class="name"><img src="https://rice.nekoweb.org/rice/folderr.png"> ライス's artwork database.exe</div>
+    
+    <div class="boxes">
+    	<div class="left"><img src="https://rice.nekoweb.org/rice/icona.png"></div>
+    	<div class="middle"><img src="https://rice.nekoweb.org/rice/iconb.png"></div>
+    	<div class="right"><img src="https://rice.nekoweb.org/rice/iconc.png"></div>
+    </div>
+    
+    </div>
+    
+    <div class="content">
+    
+    <div id="1" class="city">
+    	
+    	<div class="polaroid">
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    </div>
+    
+    </div>
+    
+    <div id="2" class="city" style="display:none">
+    	
+    	<div class="polaroid">
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    </div>
+    	
+    	</div>
+    
+    <div id="3" class="city" style="display:none">
+    	
+    	<div class="polaroid">
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    </div>
+    
+    	</div>
+    
+    <div id="4" class="city" style="display:none">
+    	
+    	<div class="polaroid">
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    </div>
+    
+    	</div>
+    
+    <div id="5" class="city" style="display:none">
+    	
+    	<div class="polaroid">
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    </div>
+    
+    	</div>
+    
+    <div id="6" class="city" style="display:none">
+    	
+    	<div class="polaroid">
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    </div>
+    
+    	</div>
+    
+    <div id="7" class="city" style="display:none">
+    	
+    	<div class="polaroid">
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    </div>
+    
+    	</div>
+    
+    <div id="8" class="city" style="display:none">
+    	
+    	<div class="polaroid">
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    </div>
+    
+    	</div>
+    
+    <div id="9" class="city" style="display:none">
+    	
+    	<div class="polaroid">
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    </div>
+    
+    	</div>
+    
+    <div id="10" class="city" style="display:none">
+    	
+    	<div class="polaroid">
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    </div>
+    
+    	</div>
+    
+    <div id="11" class="city" style="display:none">
+    	
+    	<div class="polaroid">
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    </div>
+    
+    	</div>
+    
+    <div id="12" class="city" style="display:none">
+    	
+    	<div class="polaroid">
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"></div>
+    		<div class="text">hello</div>
+    	</div>
+    </div>
+    
+    	</div>
+    
+    </div>
+    
+    <div class="sidebar">
+    
+    	<div class="bar">
+        
+        <div class="name"><img src="https://rice.nekoweb.org/rice/notebookk.png"> navigation.txt</div>
+        
+        <div class="boxes">
+    		<div class="left"><img src="https://rice.nekoweb.org/rice/icona.png"></div>
+    		<div class="middle"><img src="https://rice.nekoweb.org/rice/iconb.png"></div>
+    		<div class="right"><img src="https://rice.nekoweb.org/rice/iconc.png"></div>
+        </div>
+        
+        </div>
+        
+        <div class="plus">
+        	
+        	Cupcake ipsum dolor sit amet jelly candy pastry. Cake gingerbread soufflé gummies candy candy cotton candy jujubes. I love chocolate bar I love danish sugar plum powder I love jelly-o tootsie roll. Cake chocolate sweet roll tiramisu cake. Carrot cake biscuit I love jelly-o ice cream. Icing cotton candy sugar plum chupa chups danish. Dessert wafer icing bear claw halvah shortbread. Cake danish chupa chups jelly chocolate cake ice cream caramels danish chocolate bar. <br><br>
+        	
+        	<font color="red">this template was made for project use! please do not steal this code as i coded this myself (<a href="https://rice.place/index.html">rice</a>) !</font>
+        	
+        </div>
+    
+    </div>
+    
+    <div class="float">
+    	
+    	<div class="bar">
+        
+        <div class="name"><img src="https://rice.nekoweb.org/rice/notebookk.png"> extra.txt</div>
+        
+        <div class="boxes">
+    		<div class="left"><img src="https://rice.nekoweb.org/rice/icone.png"></div>
+    		<div class="middle"><img src="https://rice.nekoweb.org/rice/iconm.png"></div>
+    		<div class="right"><img src="https://rice.nekoweb.org/rice/iconx.png"></div>
+        </div>
+        
+        </div>
+        
+        <div class="ultra">
+        	
+        	Cupcake ipsum dolor sit amet jelly candy pastry. Cake gingerbread soufflé gummies candy candy cotton candy jujubes. I love chocolate bar I love danish sugar plum powder I love jelly-o tootsie roll. Cake chocolate sweet roll tiramisu cake. Carrot cake biscuit I love jelly-o ice cream. Icing cotton candy sugar plum chupa chups danish. Dessert wafer icing bear claw halvah shortbread. Cake danish chupa chups jelly chocolate cake ice cream caramels danish chocolate bar.
+        	
+        </div>
+    	
+    </div>
+    
+    <div class="desktop">
+    	
+    	<button class="tablinks" onclick="openCity('1')"><div class="folder"></div></button>
+    	<button class="tablinks" onclick="openCity('2')"><div class="folder"></div></button>
+    	<div class="desc">
+    		<div class="date">2024</div>
+    		<div class="date">2025</div>
+    	</div>
+    	
+    	<button class="tablinks" onclick="openCity('3')"><div class="folder"></div></button>
+    	<button class="tablinks" onclick="openCity('4')"><div class="folder"></div></button>
+    	<div class="desc">
+    		<div class="date">????</div>
+    		<div class="date">????</div>
+    	</div>
+    	
+    	<button class="tablinks" onclick="openCity('5')"><div class="folder"></div></button>
+    	<button class="tablinks" onclick="openCity('6')"><div class="folder"></div></button>
+    	<div class="desc">
+    		<div class="date">????</div>
+    		<div class="date">????</div>
+    	</div>
+    	
+    	<button class="tablinks" onclick="openCity('7')"><div class="folder"></div></button>
+    	<button class="tablinks" onclick="openCity('8')"><div class="folder"></div></button>
+    	<div class="desc">
+    		<div class="date">????</div>
+    		<div class="date">????</div>
+    	</div>
+    	
+    	<button class="tablinks" onclick="openCity('9')"><div class="folder"></div></button>
+    	<button class="tablinks" onclick="openCity('10')"><div class="folder"></div></button>
+    	<div class="desc">
+    		<div class="date">????</div>
+    		<div class="date">????</div>
+    	</div>
+    	
+    	<button class="tablinks" onclick="openCity('11')"><div class="folder"></div></button>
+    	<button class="tablinks" onclick="openCity('12')"><div class="folder"></div></button>
+    	<div class="desc">
+    		<div class="date">????</div>
+    		<div class="date">????</div>
+    	</div>
+    	
+    </div>
+
+</div>
+
+<div class="footer">
+	
+	hosted on nekoweb, made with love and frustration. 2025-??<br> <img src="https://rice.nekoweb.org/rice/buttontest.gif"> <img src="https://rice.nekoweb.org/button/ricenodot.png"> <img src="https://rice.nekoweb.org/rice/hands.png">
+	
+</div>
+
+  </body>
+
+<script>
+function openCity(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(cityName).style.display = "block";
+}
+</script>
+    
+</html>
+
+
+

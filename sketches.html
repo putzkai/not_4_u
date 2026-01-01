@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/.nekoweb-api/static/site.js" type="text/javascript" defer></script>
+    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+ <link rel="icon" type="image/png" href="favicon.ico">
+  <title>Sketches of the cutie</title>
+
+  <style>
+	::selection {
+  color: #000000;
+  background: #f08080;
+}
+
+body:before {
+content: " ";
+height: 100vh;
+width: 100vw;
+display: block;
+position: fixed; 
+top: 0; 
+left: 0; 
+z-index: 100;
+background-image: url(https://i.pinimg.com/originals/07/18/4d/07184d3bd5e5992e804de446eb4b04a4.gif);
+background-size: cover;
+background-repeat: no-repeat;
+background-position:center;
+animation: yourAnimation 1s ease 1s 1 normal forwards;
+pointer-events: none;}
+@keyframes yourAnimation { 0.0%{ opacity: 1;} 75%{ opacity: 1; } 100%{ opacity: 0;} } 
+
+body {
+font-family:ms ui gothic;
+font-size:12px;
+color:#000000;
+background-color:rgb(0, 0, 0);
+background-image:url("https://i.pinimg.com/736x/6f/79/7b/6f797b462428998b8bfa79e09161fecc.jpg");
+padding:10px;
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;
+animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0)
+{left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4)
+{left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+
+.float {
+position:absolute;
+margin-top:30px;
+left:740px;
+z-index:2;
+box-sizing: border-box;
+width:200px;
+}
+
+.container {
+position:relative;
+margin:auto;
+margin-top:100px;
+border-radius:30px;
+border:1px solid #000000;
+width:600px;
+padding:0px;
+background-image:url("https://i.pinimg.com/originals/a9/b9/d6/a9b9d6b30f1c52c22e13725d04e37a42.gif");
+box-sizing: border-box;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+/*BAR*/
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ff0000 #271515;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ff0000;
+  border-radius: 10px;
+  border: 3px double #361717;
+}
+
+.button {
+position:absolute;
+margin-top:40px;
+left:100px;
+z-index:2;
+box-sizing: border-box;;
+}
+
+.content {
+padding:30px;
+height:600px;
+box-sizing: border-box;
+overflow:auto;
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+gap:10px;
+}
+
+.photo {
+width:130px;
+max-height:10x;
+border:1px solid #5e2323;
+padding:10px;
+background-color:#e4dfdf;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.frame {
+width:120px;
+height:100px;
+border:1px solid #000000;
+}
+
+h1 {
+border-left:none;
+border-right:none;
+border-radius:0px;
+color: #ffffff;
+padding:9px;
+text-align:center;
+}
+
+.text {
+text-align:center;
+padding:2px;
+}
+
+.polaroid {
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+gap:10px;
+}
+
+.footer {
+margin:auto;
+margin-top:10px;
+width:600px;
+text-align:left;
+text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+font-weight:bold;
+padding:0px 0px 0px 10px;
+}
+
+  </style>
+        
+</head>
+   
+  <body>
+     <div class="float">
+    <div style="position: fixed; right: 0px; bottom: 0px; z-index: 200;">
+<img src="https://img1.picmix.com/output/stamp/normal/6/7/6/3/2363676_b8259.gif" width="200" height="200"; ></div>
+<div style=" max-height: 200px; position: fixed; left: 25px; top: 6px; z-index: 300;">
+<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6db176ea-43fc-419e-b786-5bb3ee833976/dfsuidv-f361029c-28de-4513-8027-5f40cefc2041.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzZkYjE3NmVhLTQzZmMtNDE5ZS1iNzg2LTViYjNlZTgzMzk3NlwvZGZzdWlkdi1mMzYxMDI5Yy0yOGRlLTQ1MTMtODAyNy01ZjQwY2VmYzIwNDEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.rOaby85vduQbVrm777A1EzZwKmy6L_NpBYE0hpFHF74" height="360"/></div>
+ <div class="snowflakes">
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+</div>
+        <div class="ultra">
+        	<img src="font.png" width="400" height="200";>
+        	
+        </div>
+		</div>
+		
+        </div>
+		<div class="button">
+       <a href="KK.html"><img src="back.png" width="70px" height="70px"></a></div>
+
+<div class="container">
+    <div class="content">
+    
+    <div id="1" class="city">
+    	<div class="polaroid">
+    	<div class="photo">
+    		<div class="frame"><img src="cutie.jpeg" width="100%" height="100px";> </div>
+    		
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"><img src="hug.jpeg" width="100%" height="100px";></div>
+    		
+    	</div>
+    	
+    	<div class="photo">
+    		<div class="frame"><img src="kisses.jpeg" width="100%" height="100px";></div>
+    		
+        </div>
+    	</div>
+    	</div>
+		<h1>and that's it for now :33 Will add more later (too)</h1><img src="https://i.pinimg.com/736x/46/a4/64/46a464c47cd7e4eeec96d79f5454c1f5.jpg" width="100%" height="100px";> 
+    	</div></div>
+    	</div>
+    </div>
+    
+    </div>
+    
+
+    	</div>
+    	
+    	
+    	</div>
+    </div>
+    
+    	</div>
+    
+   
+    	</div>
+    </div>
+    
+    	</div>
+    	</div>
+    	
+    	</div>
+    </div>
+    
+    	</div>
+    
+    </div>
+    
+        
+    
+
+<div class="footer">
+	
+	from a poor unfortunate soul to the best one. 2025-forever<br> <img src="SOAD.webp"> <img src="https://64.media.tumblr.com/a87ba36834f21a9dc03eb144a38c7147/d4292e19d55d58a5-98/s100x200/50f34afcb24f1fd048c0a8bee36e2ceb4b12fa57.gifv"> <img src="https://64.media.tumblr.com/0d7b90997a3fbb607b91b3f97b38e517/75b3ac7b94d09f7c-dc/s250x400/b484619dd46a2a45505934de500a5f9ee681da3b.webp">
+    <img src="https://64.media.tumblr.com/92bb16ec712d28257be94ee4ddfae141/2f6dbbcfe27d9476-d6/s250x400/bdce0534154c8aa590ce0de228436395cde8c856.gifv">
+	
+</div>
+
+  </body>
+
+
+</html>
+
+

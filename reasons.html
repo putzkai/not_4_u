@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- this is where you can have your style.css placed here if you want a cleaner code! -->
+<link href="style.css" rel="stylesheet" type="text/css" media="all">
+
+  <!-- the favicon image of your site! --> 
+  <link rel="icon" type="image/png" href="favicon.ico">
+  
+  <!-- this is the title that shows up on the tab! remove this when you have a title! -->
+  <title>little reasons</title>
+        
+  <style>
+body:before {
+content: " ";
+height: 100vh;
+width: 100vw;
+display: block;
+position: fixed; 
+top: 0; 
+left: 0; 
+z-index: 100;
+background-image: url(https://i.pinimg.com/originals/07/18/4d/07184d3bd5e5992e804de446eb4b04a4.gif);
+background-size: cover;
+background-repeat: no-repeat;
+background-position:center;
+animation: yourAnimation 1s ease 1s 1 normal forwards;
+pointer-events: none;}
+@keyframes yourAnimation { 0.0%{ opacity: 1;} 75%{ opacity: 1; } 100%{ opacity: 0;} } 
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;
+animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0)
+{left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4)
+{left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+
+.container1 {
+  margin: auto;
+  margin-top: 0px;
+  overflow: auto;
+  width: 458px;
+  height: 490px;
+  border-radius: 10px;
+}
+/*BAR*/
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ff0000 #271515;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ff0000;
+  border-radius: 10px;
+  border: 3px double #361717;
+}
+
+/* link styling! do whatever!! */
+a:link {
+text-decoration: none;
+color:rgb(255, 0, 0);
+}
+
+a:visited {
+text-decoration: none;
+color:rgb(202, 8, 8);
+}
+
+a:hover {
+text-decoration: none;
+font-style:italic;
+color:#FFEFEF;
+font-weight:bold;
+}
+
+a:active {
+text-decoration: none;
+color:rgb(231, 24, 24);
+}
+/* end of link styling */
+
+/* these are what you need. background color/image, font color and what font you want to use */
+body{
+font-family:ms gothic;
+font-size:14px;
+color:#706d6d;
+background-color:#350a0a;
+background-image:url("https://i.pinimg.com/originals/1c/9f/02/1c9f028d987bd9ed73118d57572619ff.gif");
+background-size:cover;
+background-attachment: fixed;
+padding:10px;
+overflow:auto;
+}
+
+
+/* this is the container. the mother grid. */
+.container {  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". 오이 오이 오이 오이 ."
+    ". 오이 오이 오이 오이 ."
+    ". 오이 오이 오이 오이 ."
+    ". 오이 오이 오이 오이 ."
+    ". 오이 오이 오이 오이 ."
+    ". 오이 오이 오이 오이 .";
+  height:900px;
+  width:960px;
+  margin:auto;
+  padding:3px;
+  position:relative;
+}
+
+/* these are the mother grids kids! */
+.오이 {  
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr 1fr;
+  grid-template-rows: 1.9fr 0.1fr 1.6fr 1fr 1.8fr 0.1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "우유 우유 우유"
+    "딸기 딸기 딸기"
+    "수박 복숭이 복숭이"
+    "수박 복숭이 복숭이"
+    "수박 복숭이 복숭이"
+    "사과 사과 사과";
+  grid-area: 오이;
+}
+
+/* header shit! */
+.우유 { 
+grid-area: 우유; 
+border:1px solid rgb(0, 0, 0);
+border-bottom:none;
+background-color:rgb(2, 0, 0);
+background-image:url("https://i.pinimg.com/originals/e6/66/97/e666973fcc0fc9b12aaaa882a2671d52.gif");
+}
+
+/* that little cute text under the header! */
+.딸기 { 
+grid-area: 딸기; 
+border:1px solid rgb(0, 0, 0);
+padding:1px;
+background-color:rgb(92, 33, 33);
+text-align:center;
+}
+
+
+/* this is where the .떡 and .ㅅㅂ is. */
+/* you can erase those and make an entirely new navigation style! */
+.수박 { 
+grid-area: 수박; 
+border:1px solid rgb(255, 0, 0);
+border-top:none;
+border-right:none;
+border-bottom:none;
+background-color:rgb(255, 255, 255);
+padding:0px 0px 5px 0px;
+}
+
+/* this is the mother grids grandkids */
+.복숭이 { 
+  display: grid; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 0.7fr 1.3fr; 
+  grid-template-rows: 0fr 0fr 0fr; 
+  gap: 0px 0px; 
+  grid-template-areas: 
+    "포도 포도 ㅠㅠ"
+    "씨발 씨발 씨발"
+    "씨발 씨발 씨발"; 
+grid-area: 복숭이; 
+border:1px solid rgb(255, 0, 0);
+border-top:none;
+border-bottom:none;
+background-color:rgb(0, 0, 0);
+padding:3px;
+}
+
+/* this is the site info on the left! */
+.포도 { 
+grid-area: 포도; 
+padding:0px;
+line-height: 100%;
+}
+
+/* this is for the calendar! on the right! */
+.ㅠㅠ { 
+grid-area: ㅠㅠ; 
+padding:0px;
+float:right;
+}
+
+.container2 {
+  margin: auto;
+  height: 60px;
+  width: 420px;
+  border: 3px dotted #ff0000;
+ 
+}
+
+/* more area under the site info and calendar divs! */
+.씨발 { 
+grid-area: 씨발; 
+line-height:130%;
+}
+
+.float {
+position:absolute;
+bottom:600px;
+right:-10px;
+z-index:2;
+box-sizing: border-box;
+width:200px;
+}
+
+.float2 {
+position:absolute;
+bottom:100px;
+left:70px;
+z-index:2;
+box-sizing: border-box;
+width:200px;
+}
+
+/* this is the footer! */
+.사과 { 
+grid-area: 사과; 
+border:1px solid rgb(253, 0, 0);
+text-align:center;
+padding:1px;
+background-color:rgb(0, 0, 0);
+}
+
+/* this is the navigation area where they have their own divs */
+/* of course you can change this! doesn't have to be in it's own div box! */
+.떡 {
+background-color: #000000;
+background-image:url("");
+border:1px groove rgb(122, 29, 29);
+border-left:none;
+border-right:none;
+border-radius:0px;
+color: #000000;
+padding:9px;
+text-align:center;
+}
+
+/* this is the navigation area but on hover */
+.떡:hover {
+background-color: #000000;
+background-image:url("");
+border:1px groove rgb(255, 255, 255);
+border-left:none;
+border-right:none;
+border-radius:0px;
+font-style:italic;
+color:#aa0000;
+font-weight:bold;
+padding:9px;
+text-align:center;
+}
+
+::selection {
+  color: #000000;
+  background: #862c2c;
+}
+
+/* this is that little description info under the navigation area. it has its own div */
+.ㅅㅂ {
+padding:6px;
+}
+
+
+  </style>
+        
+</head>
+    
+  <body>
+
+<!-- the mother grid -->
+<div class="container">
+<div class="snowflakes">
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+<div class="snowflake"><img src="https://pixels.crd.co/assets/images/gallery02/89b9bf32.gif?v=29416114"/></div>
+</div>
+<!-- the kids of mother grid -->
+  <div class="오이">
+
+    <div class="우유">
+  <!-- this is where the header is located at. -->
+  <!-- where is it? in the styling area -->    
+    </div>
+    
+    <!-- that cute text under header -->
+    <div class="딸기">
+    ｡･ﾟ･( From my <a href="https://i.pinimg.com/736x/29/82/21/29822158428b92ba00622e8dd040d57d.jpg"> <font color="FF0000">heart</font> </a> to yours-`♡´- )･ﾟ･｡
+    </div>
+    
+    <!-- the div that holds the navigation -->
+    <div class="수박">
+    
+    	<!-- 떡 is its own div, which are the navigations -->
+    	<!-- style="border-bottom:none; is needed! but of course you can completely change the navi system! -->
+    	<!-- you can remove style="cursor: not-allowed;! i put it there because there is no link provided! -->
+    	<div class="떡" style="border-bottom:none;border-top:none;background-color:#ff0000;">
+        <b>NAVIGATION</b>
+        </div>
+        <div class="떡" style="border-bottom:none;">
+        <a href="KK.html">home</a>
+        </div>
+        <div class="떡" style="border-bottom:none;">
+        <a href="reasons.html">cheesy time!</a>
+        </div>
+        <div class="떡" style="border-bottom:none;background-color:#ff0000;">
+        <b>pics :DD</b>
+        </div>
+        <div class="떡" style="border-bottom:none;">
+        <a href="sketches.html">sketches</a>
+        </div>
+        
+        <div class="떡" style="border-bottom:none;">
+        <a href="u.html">literally u</a>
+        </div>
+        <div class="떡" style="border-bottom:none;">
+        <a href="quotes.html">quotes</a>
+        </div>
+      
+        <div class="떡" style="border-bottom:none;background-color:#ff0000;">
+        <b>love u</b>
+        </div>
+        <div class="떡" style="border-bottom:none;">
+        <a href="one day.html">one day...</a>
+        </div>
+       
+     <!-- little div under navigation -->
+      <div class="ㅅㅂ"> 
+     ‎‎ ‎ ‧₊˚🎄✩ ₊˚🦌⊹♡ <br>
+       <font color="FA8072">‎ Merry Christmas area! <br>
+      ‎ ‎ ‎ I foresee lots of <br>
+       ‎ ‎ ‎ ‎ ‎good things and <br>
+       ‎ ‎ ‎hapiness coming on <br>
+       ‎ ‎ ‎ ‎ ‎ ‎ ‎ your way!</font>
+     
+     <!-- the image under the little div -->
+     <center><img src="https://i.pinimg.com/736x/25/e6/52/25e65220815d6d9a1793cc2248ffb68d.jpg" style="width:140px;margin-top:2px;border:1px solid rgb(0, 0, 0);"></center>
+      <font color="6495ED">‎ ‎ Will be here on all <br>
+       ‎  ‎ ‎‎   seasons, my love</font><br>
+     <font color="A7C7E7"> ‎  ‎  ‎  ‎  ꧁𝜗ৎ☃️𝜗ৎ꧂ </font><br>
+     </div>
+    </div>
+    <div class="float">
+    
+        <div class="ultra">
+        	
+        	<img src="eat.jpg";>
+        	
+        </div>
+        </div>
+        
+        <div class="float2">
+    
+        <div class="ultra">
+        	
+        	<img src="bats.gif";>
+        	
+        </div>
+        </div>
+
+    <!-- grandkids -->
+    <div class="복숭이">
+        <!-- left div -->
+      <div class="box" id="box1">
+                 
+                   <center><img src="https://i.pinimg.com/1200x/d8/50/ec/d850ecc7117257e348e9fde8d4b7f1b5.jpg" width="300%" height="100px"></center>
+      </div> 
+      
+        <!-- bottom div -->
+        <div class="씨발">
+        <!-- the image of a kitten and has text above the kitten -->
+                    <div class="container1">
+        <img src="https://i.pinimg.com/736x/e7/bc/a5/e7bca5c749ca4a748d2d5b03ab6230ee.jpg" width="30%" height="90px" style="float:left;"> <h1>Dude, i love my bf sm</h1><h3> Why i love him? Good question! Allow me to list it up!<br></h3>
+        <h4> Ahem, first of all, he (you. Yes, YOU) cute asf. I say it to him a lot, but ig the meaning gets lot at some point, so i'll explain properly. What i mean is that his silly way of be, the way he gets embarassed with the things i say, his silly little smile, his adorable laugh are simply the best thing i've ever saw or heard. They make me feel so overjoyed and giggle and i find them cute for it. That's why i call him cute.
+          Second of all, i love him very much cuz i can make him feel well. He never told me specifically it, but i can see on the way he shares so confidently his things with me, his interests, his secrets, his confessions... It makes me so happy everytime i see him just...being him. Laughing around, making jokes, yapping sm, or simply just quietly confessing his love for me. I love it sm that i can make someone as amazing as him that happy❤︎
+        Third of all, im so in love with him because he makes ME feel good. Be it because of some of his dumb jokes or because he's simply a fucking sweetheart and so patient all time(˶˃^˂˶) 
+      Fourth on it, it's so cool that we share the same interests of almost everything. Like, i know he's a fucking nerd on games and im not, but at least he shows me them, so i can be too (lol, never surpassing u tho). And, like, games, artists, movies.. blud literally me but good lol. And tbh, im so glad we are sm alike, because i just keep getting more and more endeared by him and i know i probably would'nt date someone that didnt shared some interests with me :3
+    Fifth... man, tbh, i just love all of him, i can just choose little things. I love him because he's so sweet, and because he's cute, and cuz he's very lovely, and cuz he's so smart, and <font color="FF0000"> YOU GOT ME!!!</font> I just want to make it clear he's the best person and friend and boyfriend someone could ever have in their life, and i don't really need a reason to like him that much, just his existance is already enough to be worth of loving.
+   That being said, thank u Mrs. Boermans, u got the most divine womb fr🙏........on a not weird way.....................u got it-</h4><br>
+          <br>
+<div class="container2">
+ <div style="position:relative">
+                          <img src="pookie.gif" style="position:absolute; left: 5px; top:-22px;">
+                          <img src="mine.gif" style="position:absolute; right: 5px; top:-22px;">
+                    </div>
+                        <div class="audio" id="box5">
+                          audio is supposed to be here but i got no oportunity to record yet, sowwy
+                            </audio>
+                      </div>
+                      </div> 
+     </div>
+</div>
+    </div>
+    
+    
+    <!-- footer -->
+    <div class="사과">
+    From <b>Kai</b> to <b>Lars</b> 2024, made with love(and some tears, but thats irrelevant).
+    </div>
+    
+  </div>
+  
+</div>
+
+  </body>
+    
+</html>
+  
